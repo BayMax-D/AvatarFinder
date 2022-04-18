@@ -13,7 +13,7 @@ api_key = os.getenv("API_KEY")
 
 class Database:
     def __init__(self, database=table):
-        self.connection = psycopg2.connect(database=database)
+        self.connection = psycopg2.connect("dbname=postgres user=postgres host=localhost port=5432 password=hui1205")
         self.connection.autocommit = True
         self.cursor = self.connection.cursor()
 
